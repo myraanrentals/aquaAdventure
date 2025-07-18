@@ -1,0 +1,111 @@
+// .spinner {
+//   width: 83px;
+// }
+.datepicker{
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  padding: 9px 15px;
+  mat-icon{
+    font-size: 14px;
+    height: 14px;
+    width: 14px;
+  }
+}
+.pop-wrapper{
+  overflow: auto;
+  max-height: 90vh;
+}
+.spinner input {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.spinner button {
+  border: 1px solid #ccc;
+}
+
+.price .actual {
+  text-decoration: line-through;
+  color: var(--base-grey);
+  font-size: 12px;
+  position: relative;
+  top: -5px;
+}
+
+.price .discounted {
+  font-weight: 600;
+  font-size: 14px;
+}
+#pay-now{
+  background: var(--base-green);
+  width: 100%;
+  border-radius: 0;
+  color: #fff;
+  padding:10px 20px;
+  font-size: 1.2em;
+}
+table{margin:0}
+th{font-weight: 600;}
+th,td, th label {
+  font-size: 13px;
+}
+.input-group span {
+  position: absolute;
+  background: none;
+  right: 0;
+  mat-icon{
+    font-size: 12px;
+  }
+}
+label{font-size: 14px;font-weight: 500;}
+#pricing-wrapper > div:not(:last-child){
+  border-bottom: 1px dashed #ccc;
+}
+#pricing-wrapper div {
+  padding: 5px 0;
+  h2{
+    margin:0
+    small{font-size: 13px;}
+  }
+}
+button.small-btn {
+  background: var(--base-blue);
+  border: none;
+  color: #fff;
+  height: 36px;
+  width: 36px;
+  border-radius: 5px;
+}
+
+button.small-btn+div {
+  width: 40px;
+  text-align: center;
+}
+.final-amount{font-size: 20px;}
+
+// select.form-select, .form-control {
+//   padding: 2px 7px;
+//   font-size: 13px;
+//   position: relative;
+//   z-index: 1;
+//   background-color: transparent;
+// }
+
+.input-group-text {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 24px;
+}
+
+.input-group-text mat-icon {width: 14px;height: 14px;}
+// td .form-control, td .form-select {
+//   padding: 0;
+//   border: 0;
+//   font-size: 13px;
+// }
+// td .form-select{padding-right:30px}

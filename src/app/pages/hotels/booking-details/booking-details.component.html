@@ -1,0 +1,38 @@
+<div class="pop-wrapper">
+  <div class="container pb-4">
+    <div class="form-group">
+      <label for="">Select tour date</label><br>
+      <div class="input-group">
+        <input type="date" placeholder="" value="" id="package-date" class="form-control">
+        <span class="datepicker"><mat-icon>calendar_today</mat-icon></span>
+      </div>
+    </div>
+    <div id="pricing-wrapper" class="mt-2">
+      <div class="d-flex justify-content-between align-items-center" >
+        <div>
+          <h2>Adult</h2>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button class="small-btn minus">-</button>
+          <div>1</div>
+          <button class="small-btn minus">+</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between " >
+        <div>
+          <h2>Child<br><small>5 year or less</small></h2>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button class="small-btn minus">-</button>
+          <div>1</div>
+          <button class="small-btn minus">+</button>
+        </div>
+      </div>
+      <div class="final-amount py-3">
+        ₹1450
+      </div>
+    </div>
+
+  </div>
+</div>
+<button class="btn" id="pay-now" routerLink="/payments">Book Now</button>

@@ -1,0 +1,481 @@
+
+
+<!-- <div class="discount-cta">
+  <div class="animate" (click)="showBookingDetails = true"><img src="/assets/discount.png" alt=""></div>
+</div> -->
+<div id="wrapper">
+  <div id="navbar" [class.active]="navOpen">
+    <div class="d-flex justify-content-end p-2" (click)="navOpen = false"><mat-icon>close</mat-icon></div>
+    <app-navbar></app-navbar>
+  </div>
+  <header class="d-flex justify-content-between align-items-center">
+    <div><img src="assets/logo.png" height="48px" alt="" (click)="redirectToHome()"></div>
+    <button (click)="navOpen = !navOpen" mat-icon-button class="menu-icon pt-0" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </header>
+  <div style="height: 60px;"></div>
+  <div class="slider-wrapper" id="inner-slider" style="height:320px">
+    <ng-image-slider
+      [imageSize]="{ width: '100%', height: '100%' }"
+      [showArrow]="true"
+      [autoSlide]="true"
+      [infinite]="true"
+      [animationSpeed]="1"
+      [images]="data.imageObject" #nav>
+    </ng-image-slider>
+
+  </div>
+
+  <div class="detail-body">
+    <div class="w-100 px-3 pos-bottom">
+      <div>
+        <div class="info">
+          <h1>{{data.details[0].name}}</h1>
+          <div class="d-flex align-items-center gap-2">
+
+            <p class="location d-flex align-items-center mb-0"><mat-icon>location_on</mat-icon>{{data.details[0].location}}</p>
+            <div class="rating-style-2 d-flex align-items-center">
+              <mat-icon>star</mat-icon> {{data.details[0].ratings}} &nbsp;<span class="color-grey">{{data.details[0].rated}}</span>
+            </div>
+            <a href="https://maps.app.goo.gl/WRAM7V6VwWqFwB8k9" id="show-map">Show on Map</a>
+          </div>
+
+          <div class="mt-2">
+            <a href="javascript:void(0)" class="btn btn-success" id="share-whatsapp" (click)="openWhatsApp('+919324690926')">
+              <svg height="56.693px" id="Layer_1" style="enable-background:new 0 0 56.693 56.693;" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+                .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              </style><g><path class="st0" d="M46.3802,10.7138c-4.6512-4.6565-10.8365-7.222-17.4266-7.2247c-13.5785,0-24.63,11.0506-24.6353,24.6333   c-0.0019,4.342,1.1325,8.58,3.2884,12.3159l-3.495,12.7657l13.0595-3.4257c3.5982,1.9626,7.6495,2.9971,11.7726,2.9985h0.01   c0.0008,0-0.0006,0,0.0002,0c13.5771,0,24.6293-11.0517,24.635-24.6347C53.5914,21.5595,51.0313,15.3701,46.3802,10.7138z    M28.9537,48.6163h-0.0083c-3.674-0.0014-7.2777-0.9886-10.4215-2.8541l-0.7476-0.4437l-7.7497,2.0328l2.0686-7.5558   l-0.4869-0.7748c-2.0496-3.26-3.1321-7.028-3.1305-10.8969c0.0044-11.2894,9.19-20.474,20.4842-20.474   c5.469,0.0017,10.6101,2.1344,14.476,6.0047c3.8658,3.8703,5.9936,9.0148,5.9914,14.4859   C49.4248,39.4307,40.2395,48.6163,28.9537,48.6163z"/><path class="st0" d="M40.1851,33.281c-0.6155-0.3081-3.6419-1.797-4.2061-2.0026c-0.5642-0.2054-0.9746-0.3081-1.3849,0.3081   c-0.4103,0.6161-1.59,2.0027-1.9491,2.4136c-0.359,0.4106-0.7182,0.4623-1.3336,0.1539c-0.6155-0.3081-2.5989-0.958-4.95-3.0551   c-1.83-1.6323-3.0653-3.6479-3.4245-4.2643c-0.359-0.6161-0.0382-0.9492,0.27-1.2562c0.2769-0.2759,0.6156-0.7189,0.9234-1.0784   c0.3077-0.3593,0.4103-0.6163,0.6155-1.0268c0.2052-0.4109,0.1027-0.7704-0.0513-1.0784   c-0.1539-0.3081-1.3849-3.3379-1.8978-4.5706c-0.4998-1.2001-1.0072-1.0375-1.3851-1.0566   c-0.3585-0.0179-0.7694-0.0216-1.1797-0.0216s-1.0773,0.1541-1.6414,0.7702c-0.5642,0.6163-2.1545,2.1056-2.1545,5.1351   c0,3.0299,2.2057,5.9569,2.5135,6.3676c0.3077,0.411,4.3405,6.6282,10.5153,9.2945c1.4686,0.6343,2.6152,1.013,3.5091,1.2966   c1.4746,0.4686,2.8165,0.4024,3.8771,0.2439c1.1827-0.1767,3.6419-1.489,4.1548-2.9267c0.513-1.438,0.513-2.6706,0.359-2.9272   C41.211,33.7433,40.8006,33.5892,40.1851,33.281z"/></g></svg>
+              Share</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B919324690926&text&type=phone_number&app_absent=0" class="btn btn-default" id="like-btn"><mat-icon>favorite</mat-icon></a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="card mt-3" id="pricing">
+        <div class="card-body">
+          <p>Start From <span class="text-through">₹{{data.details[0].amount}}</span></p>
+          <div class="price">
+            ₹{{data.details[0].discountedamount}}<small>/per adult</small>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="border-bottom-layout mt-5">
+        <div><mat-icon class="matIcon">directions_boat</mat-icon>3 HOURS CRUISE</div>
+        <div><mat-icon class="matIcon">lunch_dining</mat-icon>Meal</div>
+        <div><mat-icon class="matIcon">liquor</mat-icon> Complimentary Drinks</div>
+        <div><mat-icon class="matIcon">library_music</mat-icon> LIVE DJ ENTERTAINMENT</div>
+      </div>
+
+      <div class="packages-details mt-5">
+        <h2>Select Package Options</h2>
+        <!-- <div class="form-group">
+          <label for="">Select tour date</label><br>
+          <div class="input-group">
+            <input type="date" placeholder="" value="" id="package-date" class="form-control">
+            <span class="datepicker"><mat-icon>calendar_today</mat-icon></span>
+          </div>
+        </div> -->
+        <div class="card my-3">
+          <div class="card-body">
+            <h3>Luxury Dinner Cruise</h3>
+            <p><span class="pe-3">Adult: ₹2999</span><span>Child: ₹1499</span></p>
+            <a href="javascript:void(0)" (click)="showDescriptionLuxury = true">View Description</a><br>
+            <a href="javascript:void(0)" class="btn btn-primary active" (click)="showBookingDetails=true">BOOK NOW</a>
+           <!-- <a href="javascript:void(0)" class="btn btn-primary active" (click)="openWhatsApp('+919324690926')">BOOK NOW</a>&nbsp;&nbsp;-->
+          <!-- <a href="javascript:void(0)" class="call-us" (click)="openWhatsApp('+919324690926')">CALL NOW</a>-->
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Family Dinner Cruise</h3>
+            <p><span class="pe-3">Adult: ₹1349</span><span>Child: ₹999</span></p>
+            <a href="#" (click)="showDescriptionFamily = true">View Description</a><br>
+            <a href="javascript:void(0)" class="btn btn-primary active" (click)="showBookingDetails=true">BOOK NOW</a>
+            <!--<a href="javascript:void(0)" class="btn btn-primary active" (click)="openWhatsApp('+919324690926')">BOOK NOW</a>&nbsp;&nbsp;-->
+           <!-- <a href="javascript:void(0)" class="call-us" (click)="openWhatsApp('+919324690926')">CALL NOW</a>-->
+          
+          </div>
+        </div>
+      </div>
+
+      <div id="highlights" class="mt-5">
+        <h2>Dinner Cruise In Mandovi River Goa Highlights</h2>
+        <ul class="check-style">
+          <li><strong>Scenic cruise</strong> - Leisurely 1-2 hour cruise along the Mandovi River through Panjim city. </li>
+          <li><strong>City views</strong> - Witness panoramic views of colonial Portuguese architecture, landmarks, and tropical greenery.</li>
+          <li><strong>Sightseeing</strong> - Glide past sites like Adil Shah Palace, Reis Magos Fort, and Miramar Beach. </li>
+          <li><strong>Sunset vibes</strong> - As the sun sets, see a romantic transformation with delicate lights.</li>
+          <li><strong>Hospitality</strong> - Complimentary snacks, drinks, and knowledgeable guides enhance the experience.</li>
+        </ul>
+      </div>
+
+      <div id="overview" class="mt-5">
+        <h2>Dinner Cruise In Mandovi River Goa Overview</h2>
+        <h2 class="color-blue">About Dinner Cruise In Goa</h2>
+        <div class="content">
+          <p>Indulge in the ultimate luxury experience with a dinner cruise in Goa. Sail along the stunning coastline as you savor gourmet cuisine, fine wines, and captivating entertainment. Book now for an unforgettable evening under the Goan skies.</p>
+        </div>
+
+        <h2 class="color-blue">Dinner Cruise In Goa Quick Facts</h2>
+        <div>
+          <ul class="arrow-style">
+            <li>Activity Timing: 8:30 PM to 11:30 PM</li>
+            <li>Activity Duration: Approx 3 Hours</li>
+            <li>Pick Up & Drop Off Location: Pick up and Drop off will be from Baga, Calangute, Candolim, and Arpora Junction(Family Dinner Cruise) with extra charges of RS 200/-</li>
+          </ul>
+        </div>
+
+        <h2 class="color-blue">Dinner Cruise In Goa Inclusions</h2>
+        <div>
+          <ul class="check-style">
+            <li>Indoor Dance Floor</li>
+            <li>Portugues Dance</li>
+            <li>Jive Dance</li>
+            <li>Goan Folk Dance</li>
+            <li>DJ Live Music</li>
+            <li>LED Screen</li>
+            <li>Special Attraction for kids</li>
+            <li>Mascot Live Show</li>
+
+            <li>Cruise Feature</li>
+            <li>DJ Live Music</li>
+            <li>LED Screen</li>
+            <li>Hygienic Washroom</li>
+            <li>Spacious Table for Limited entry</li>
+            <li>Couples & Family Attraction & participation</li>
+            <li>Upper deck</li>
+            <li>Tripple Decker</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <img src="assets/banner-main.jpg" alt="" class="mb-3">
+            <h2>Your Goa Travel itinerary is waiting.</h2>
+            <p>Receive a curated itinerary featuring the most iconic experiences in Dinner Cruise In Mandovi River Goa, straight to your whatsapp.</p>
+            <div class="row contact-wrapper">
+              <div class="col-4">
+                <select name="" id="" class="form-select">
+                  <option value="0">Select</option>
+                  <option value="1">India</option>
+                  <option value="2">Select</option>
+                </select>
+              </div>
+              <div class="col-8">
+                <input type="text" placeholder="Mobile Number" class="form-control">
+              </div>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary mt-3" id="enquiry">Enquiry Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="things-to-carry" class="mt-5">
+          <h2>Things to Carry</h2>
+          <div class="border-bottom-layout">
+            <div><mat-icon>local_activity</mat-icon> Vouchers</div>
+            <div><mat-icon>water_bottle</mat-icon> Water Bottle</div>
+            <div><mat-icon>backpack</mat-icon> Day Pack</div>
+            <div><mat-icon>badge</mat-icon> ID Proof</div>
+          </div>
+        </div>
+
+        <div id="location-details" class="mt-5">
+          <h2>Location Details about Dinner Cruise In Mandovi River Goa Map</h2>
+          <div class="border-bottom-layout">
+            <div>Starting Point: <a href="#" class="ps-2 color-blue">Panjim Mandovi River <mat-icon>arrow_forward</mat-icon></a></div>
+            <div style="border:none">End Point: <a href="#" class="ps-2 color-blue">Panjim Mandovi River <mat-icon>arrow_forward</mat-icon></a></div>
+          </div>
+        </div>
+
+        <div id="reviews" class="mt-5">
+          <h2>Dinner Cruise In Mandovi River Goa Reviews</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="d-flex">
+                <div class="initial">H</div>
+                <div>
+                  <div class="name">Hemant</div>
+                  <div class="ratings">
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Super Experience</strong></p>
+              <p>"Absolutely Amazing Dinner Cruise!
+              I recently went on a dinner cruise with friends, and it was fantastic! The food was delicious, the views were breathtaking, and the service was top-notch. Highly recommend for a memorable night out!"</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="d-flex">
+                <div class="initial">K</div>
+                <div>
+                  <div class="name">Kapil</div>
+                  <div class="ratings">
+                    <div>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p><strong>Super Experience</strong></p>
+              <p>My wife loved the Dinner Cruise for her birthday. The boat staff was excellent and the onboard entertainment made it a memorable time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="accordion accordion-flush" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What types of water sports do you offer?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              At Aqua Adventure, we offer a diverse range of water sports, including jet skiing, parasailing, banana boat rides, and more. Whether you're seeking an adrenaline rush or a leisurely ride, we have something for everyone.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Can I book a cruise with Aqua Adventure?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, absolutely! Our luxury cruises offer the perfect opportunity to explore the stunning coastline of Goa while enjoying delicious meals and witnessing breathtaking sunsets over the Arabian Sea.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Are your adventure activities suitable for all skill levels?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Our adventure activities, such as trekking, kayaking, and ATV rides, are designed to cater to adventurers of all skill levels. Whether you're a beginner or an experienced thrill-seeker, we have the perfect adventure for you.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Do you provide scuba diving expeditions?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Yes, we offer scuba diving expeditions for those looking to explore Goa's vibrant underwater world. Our experienced instructors will guide you as you discover the hidden treasures of the ocean, including colorful coral reefs and marine life.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Is safety a priority at Aqua Adventure?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Absolutely! At Aqua Adventure, safety is our top priority. We have a team of experienced professionals, state-of-the-art equipment, and adhere to strict safety standards to ensure that every moment with us is filled with excitement, wonder, and unforgettable memories.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <h2>Confirmation Policy</h2>
+      <ul class="check-style">
+        <li>Upon booking, the traveller will receive a confirmation voucher via email, within 24 hours.</li>
+        <li>In the special cases of slots not being available, feasible alternatives will be provided to the customer, in regards to the customer's preference. In such cases, a new voucher would be sent via email, consisting of the new travel details.</li>
+      </ul>
+
+      <h2>Cancellation Policy</h2>
+      <ul class="check-style">
+        <li>Any cancellation made 20 days prior to the date of departure, would levy a 30% of total tour cost as cancellation charges.</li>
+        <li>Any cancellation made within 7-20 days prior to the date of departure, would levy a 60% of total tour cost as cancellation charges.</li>
+        <li>Any cancellation made within 0-7 days prior to the date of departure, would levy a 100% of total tour cost as cancellation charges.</li>
+        <li>Due to any restrictions such as sudden government policies or regulations, health hazards, medical emergencies, or unprecedented weather conditions, activities and tours may be nonoperational and be cancelled. In cases such as these, operators will attempt to cater to the traveller an alternate, which is feasible in nature. However, any refund would not be catered.</li>
+      </ul>
+
+      <h2>Goa Top Attractions</h2>
+      <div id="gallery">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/luxury/011.png" alt="" width="100%">
+          </div>
+          <div class="card-body">
+            <h3>Dudhsagar Falls, Goa</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/luxury/012.png" alt="" width="100%">
+          </div>
+          <div class="card-body">
+            <h3>Scuba Diving, Goa</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/luxury/013.png" alt="" width="100%">
+          </div>
+          <div class="card-body">
+            <h3>Water Sports, Goa</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/luxury/014.png" alt="" width="100%">
+          </div>
+          <div class="card-body">
+            <h3>Adventrue Rides, Goa</h3>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-5">More Goa Attractions</h2>
+      <div class="list-of-links">
+        <a href="#">Se Cathedral Church</a>
+        <a href="#">Dudhsagar Falls, Goa</a>
+        <a href="#">Arambol Beach</a>
+        <a href="#">Varca Beach</a>
+        <a href="#">Dona Paula Beach</a>
+        <a href="#">Anjuna Flea Market</a>
+        <a href="#">Anjuna Beach</a>
+        <a href="#">Splashdown Waterpark</a>
+        <a href="#">Dr. Salim Ali Bird Sanctuary</a>
+        <a href="#">Reis Magos Fort</a>
+        <a href="#">Bambolim Beach</a>
+        <a href="#">Betalbatim Beach</a>
+        <a href="#">Baga Beach</a>
+        <a href="#">Cavelossim Beach</a>
+        <a href="#">Miramar Beach</a>
+        <a href="#">Colva Beach</a>
+        <a href="#">Ashwem Beach</a>
+        <a href="#">Calangute Beach</a>
+        <a href="#">Netravali Bubbling Lake</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="sticky-footer">
+      <button class="call" (click)="callPhoneNumber('+919324690926')">
+        <img src="assets/phone.png" alt="">
+      </button>
+      <div>
+        <button class="call-us">Book Now</button>
+        <button class="whatsapp" (click)="openWhatsApp('+919324690926')">Get Details</button>
+      </div>
+
+  </div>
+</div>
+<ng-template [ngIf]="showBookingDetails">
+  <div class="overlay" (click)="showBookingDetails = false"></div>
+  <div id="booking-details">
+    <div class="container">
+      <div class="d-flex justify-content-between pb-3">
+        <h2 class="m-0">Booking Confirmation</h2>
+        <mat-icon class="ico-close" (click)="showBookingDetails = false">close</mat-icon>
+      </div>
+      <hr>
+    </div>
+      <app-booking-details></app-booking-details>
+
+  </div>
+</ng-template>
+<ng-template [ngIf]="showDescriptionLuxury">
+  <div class="overlay" (click)="showDescriptionLuxury = false"></div>
+  <div id="booking-details">
+    <div class="container">
+      <div class="d-flex justify-content-between pb-3">
+        <h2 class="m-0">Variant Description</h2>
+        <mat-icon class="ico-close" (click)="showDescriptionLuxury = false">close</mat-icon>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <p><strong>Inclusion</strong></p>
+      <ul class="check-style pb-0">
+        <li>Meals: 2 Pegs or 2 Beers, Soft Drinks, Snacks, Buffet Dinner(Veg & Non-Veg) </li>
+        <li>Activities: Cruising for 2.5 Hours, Live DJ Session, Various Fun Games, Scenic Dining, Atal Setu Panjim Bridge for selfies and videos, Magic Show, 2 Goan Folk Dance</li>
+      </ul>
+      <p class="mt-2 mb-1"><strong>Description</strong></p>
+      <h3>Child Policy:</h3>
+      <ul class="arrow-style">
+        <li>Children Below the Age of 5 Years can Join for Free</li>
+        <li>Children Between Age of 5-15 Years Will Be Charged as per Kids</li>
+        <li>Children Above the Age of 15 Years Will Be Considered Adult</li>
+        <li>Pick & Drop : Extra  Rs. 200/- </li>
+      </ul>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template [ngIf]="showDescriptionFamily">
+  <div class="overlay" (click)="showDescriptionFamily = false"></div>
+  <div id="booking-details">
+    <div class="container">
+      <div class="d-flex justify-content-between pb-3">
+        <h2 class="m-0">Variant Description</h2>
+        <mat-icon class="ico-close" (click)="showDescriptionFamily = false">close</mat-icon>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <p><strong>Inclusion</strong></p>
+      <ul class="check-style pb-0">
+        <li>Meals: 2 Pegs or 2 Beers, Soft Drinks, Snacks, Buffet Dinner(Veg & Non-Veg) </li>
+        <li>Activities: Cruising for 2.5 Hours, Live DJ Session, Various Fun Games, Scenic Dining, Atal Setu Panjim Bridge for selfies and videos, Magic Show, 2 Goan Folk Dance</li>
+      </ul>
+      <p class="mt-2 mb-1"><strong>Description</strong></p>
+      <h3>Child Policy:</h3>
+      <ul class="arrow-style">
+        <li>Children Below the Age of 5 Years can Join for Free</li>
+        <li>Children Between Age of 5-15 Years Will Be Charged as per Kids</li>
+        <li>Children Above the Age of 15 Years Will Be Considered Adult</li>
+        <li>Pick & Drop : Extra  Rs. 200/- </li>
+      </ul>
+    </div>
+
+  </div>
+</ng-template>
+
+
+
+
+
+
