@@ -153,7 +153,7 @@ export class CombosComponent {
       guests:'453',
       ratings:'4.9',
       img: [
-        {image:'assets/watersports/03.png', thumbImage:'assets/watersports/03.png', caption:'watersports'},
+        {image:'assets/watersports/W11.png', thumbImage:'assets/watersports/W11.png', caption:'watersports'},
        ],
       amenities:[
         {name:'Scuba Diving', icon:'scuba_diving'},
